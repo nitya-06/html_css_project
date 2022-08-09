@@ -1,0 +1,379 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+/* reset styling code*/
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+nav ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cccccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+input,
+select {
+    vertical-align: middle;
+}
+
+
+/* my code */
+@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@100&family=Cormorant+Garamond:ital,wght@1,300&family=Lato:wght@300&display=swap');
+
+:root {
+    --primarycolor: #047aed;
+    --secondarycolor: #1c3fa8;
+    --darkcolor: #002240;
+    --lightcolor: #f4f4f4;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+    font-family: 'lato',sans-serif;
+}
+ul{
+    text-decoration: none;
+    margin: 10px 0;
+}
+/* .navigation ul li{
+    margin: 10px 10px;
+    display: block;
+    float: left;
+    list-style: none;
+} */
+a{
+    color: #333;
+    text-decoration: none;
+}
+h1 , h2 {
+    font-weight: 300;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+p{
+    margin: 10px 0;
+}
+img{
+    width: 100%;
+}
+/* navbar */
+.navbar{
+    background-color: var(--primarycolor);
+    color: #fff;
+    height: 70px;
+}
+.navbar ul {
+    display: flex;
+}
+.navbar a {
+    color: #fff;
+    padding: 10px;
+    margin: 0 5px;
+}
+.navbar a:hover{
+    border-bottom: 2px #fff solid;
+}
+.navbar .flex{
+    justify-content: space-between;
+}
+/* showcase */
+.showcase{
+    height: 400px;
+    background-color:  var(--primarycolor);
+    color: #fff;
+    position: relative;
+}
+.showcase::before, .showcase::after {
+    content: "";   /*it is must */
+    position: absolute;
+    height: 100px;
+    bottom: -70px;
+    left: 0;
+    right: 0;
+    background-color:#fff;
+    transform: skewy(-3deg);
+    -webkit-transform: skewy(-3deg);
+    -moz-transform: skewy(-3deg);
+    -ms-transform: skewy(-3deg);
+}
+.showcase h1{
+    font-size: 40px;
+}
+.showcse p{
+    margin: 20px 0;
+}
+.showcase .grid{
+    grid-template-columns: 55% 45%;
+    gap: 30px;
+    overflow: visible;
+}
+.showcase-form{
+    position: relative;
+    top: 60px;
+    height: 350px;
+    width: 400px;
+    padding: 40px;
+    z-index: 100;
+    justify-self: flex-end;
+}
+.showcase-form .form-control{
+    margin: 30px 0;
+}
+.showcase-form input[type="text"] ,.showcase-form input[type="email"]{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #b4becb;
+    padding: 3px;
+    font-size: 16px;
+}
+.showcase-form input:focus{
+    outline: none;
+
+}
+
+/* stats */
+.stats{
+    padding-top: 100px;
+}
+.stats-heading{
+    max-width: 500px;
+    margin: auto;
+}
+.stats .grid h3{
+    font-size: 35px;
+}
+.stats .gird p{
+    font-size: 20px;
+    font-weight: bold;
+}
+/* CLI */
+.cli .grid{
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+.cli img{ /*or we can use .cli .grid > *:first-child */
+    grid-column: 1 / span 2; 
+    grid-row: 1 / span 2; 
+}
+/* cloud */
+.cloud .grid{
+    grid-template-columns: 4fr 3fr;
+}
+.lead{
+    text-align: center;
+}
+/* language */
+.language .flex{
+    flex-wrap: wrap ;
+    flex-direction: row;
+}
+.language .card{
+    margin: 18px 10px 40px;
+    transition: transform 0.2s ease-in;
+}
+.language .card h4{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.language .card:hover{
+    transform: translateY(-15px);
+}
+/* footer */
+.footer  a{
+    color: rgb(241, 238, 238);
+}
+.footer .social a{
+    margin: 5px 10px;
+}
+.footer .social .fa{
+    transition: transform 0.2s ease-in-out;
+}
+.footer li a:hover{
+    border-bottom: 1px #fff solid;
+    transform: translateY(-10px);
+}
+.footer .social .fa:hover{
+    transform: translateY(-5px);
+}
+
+/* tablets and under */
+@media(max-width: 768px){
+
+}
+/* mobiles */
+@media(max-width: 500px){
+    .navbar{
+        height: 110px;
+    }
+    .navbar .flex{
+        flex-direction: column;
+    }
+    .navbar ul{
+        padding: 10px;
+        background-color: rgba(0,0,0,0.1);
+    }
+}
